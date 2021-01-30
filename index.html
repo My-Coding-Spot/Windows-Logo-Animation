@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1dbdd0b3cf.js" crossorigin="anonymous"></script>
+    <title>Logo Animation</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <i class="fab fa-windows"></i>
+    </div>
+
+    <script>
+        const colors = ['#00ffff', '#0000ff', '#ff00ff', '#ff0000', '#ffff00', '#00ff00'];
+        var i = 0;
+
+        setInterval(() => {
+            document.getElementById('container').style.textShadow = `0 0 30px ${colors[i]}, 0 0 70px ${colors[i]}, 0 0 170px ${colors[i]}`
+            i += 1
+            if (i == colors.length) {
+                i = 0
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>
